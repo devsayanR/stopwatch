@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(17, 15, 15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+.buttons{
+    margin-top: 80px;
+}
+
+
+.buttons button{
+    font-size: 1.2rem;
+    padding: 5px;
+    margin-inline: 20px;
+    cursor: pointer;
+}
