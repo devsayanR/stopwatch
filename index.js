@@ -5,9 +5,15 @@ const time = document.getElementById("time")
 const markBtn = document.getElementById("mark")
 const writeList = document.getElementById("write_list")
 
-let hours = 0, minutes = 0, seconds = 0, counter = 1;
+
+let hours = 0, minutes = 0, seconds = 0;
 let intervalId;
 
+
+// window.addEventListener('beforeunload', function (e) {
+//     e.preventDefault();
+//     e.returnValue = true;
+// });
 
 
 const triggerTimer = () => {
@@ -39,21 +45,25 @@ playPauseBtn.addEventListener("click", () => {
 
 })
 
+markBtn.addEventListener("click", () => {
+    writeList.style.height = "60vh";
+    const heading = document.createElement("h2")
+    heading.textContent = `${" " + hours + " "}:${" " + minutes + " "}:${" " + seconds + " "}`
+    writeList.appendChild(heading)
+})
+
 resetBtn.addEventListener('click', () => {
     hours = 0;
     minutes = 0;
     seconds = 0;
+    writeList.style.height = "auto";
     clearInterval(intervalId);
     intervalId = null;
     if (swap.classList.contains('bi-pause')) {
         swap.classList.replace('bi-pause', 'bi-play-fill');
     }
     time.innerText = `${hours < 10 ? "0" + `${hours}` : `${hours}`}:${minutes < 10 ? "0" + `${minutes}` : `${minutes}`}:${seconds < 10 ? "0" + `${seconds}` : `${seconds}`}`
-})
-
-
-markBtn.addEventListener("click", () => {
-    const heading = document.createElement("h2")
-    heading.innerText = `${counter++}. ${hours}:${minutes}:${seconds}`
-    writeList.append(heading)
+    if (writeList.firstChild) {
+        writeList.innerHTML = ""
+    }
 })

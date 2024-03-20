@@ -14,14 +14,13 @@
     justify-content: center;
 }
 
-.main{
+.main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10rem;
 }
 
-.left{
+.left {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,12 +29,12 @@
     color: aliceblue;
 }
 
-.buttons{
+.buttons {
     margin-top: 80px;
 }
 
 
-.buttons button{
+.buttons button {
     font-size: 1.2rem;
     padding: 5px;
     margin-inline: 20px;
@@ -43,12 +42,48 @@
 }
 
 
-.right{
-    border: 2px solid #fff;
+.right {
     padding: 10px;
     height: 20rem;
-    overflow: auto;
-    width: 160px;
+    width: 200px;
     color: #fff;
     text-align: center;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right::-webkit-scrollbar {
+    width: 5px;
+}
+
+.right::-webkit-scrollbar-track {
+    background-color: #282727;
+}
+
+.right::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+
+@media screen and (max-width: 630px) {
+    .buttons {
+        margin-top: 20px;
+    }
+
+    .main {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .right {
+        height: auto;
+        width: 100vw;
+    }
+
+    .right::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
 }
