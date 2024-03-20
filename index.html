@@ -12,12 +12,16 @@
 <body>
     <div class="container">
         <div class="main">
-            <h2 id="time">00:00:00</h2>
-            <div class="buttons">
-                <button type="reset" id="reset"><i class="bi bi-arrow-clockwise"></i></button>
-                <button type="button" id="play_pause"><i class="bi bi-play-fill" id="swapPP"></i></button>
-                <button type="button" id="mark"><i class="bi bi-bookmark-check-fill"></i></button>
+            <div class="left">
+                <h2 id="time">00:00:00</h2>
+                <div class="buttons">
+                    <button type="reset" id="reset"><i class="bi bi-arrow-clockwise"></i></button>
+                    <button type="button" id="play_pause"><i class="bi bi-play-fill" id="swapPP"></i></button>
+                    <button type="button" id="mark"><i class="bi bi-bookmark-check-fill"></i></button>
+                </div>
             </div>
+
+            <div class="right" id="write_list"></div>
         </div>
     </div>
     <script src="index.js"></script>

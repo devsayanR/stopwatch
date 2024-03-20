@@ -17,6 +17,13 @@
 .main{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 10rem;
+}
+
+.left{
+    display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     font-size: 2rem;
@@ -33,4 +40,15 @@
     padding: 5px;
     margin-inline: 20px;
     cursor: pointer;
+}
+
+
+.right{
+    border: 2px solid #fff;
+    padding: 10px;
+    height: 20rem;
+    overflow: auto;
+    width: 160px;
+    color: #fff;
+    text-align: center;
 }
