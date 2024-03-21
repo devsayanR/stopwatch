@@ -10,10 +10,10 @@ let hours = 0, minutes = 0, seconds = 0;
 let intervalId;
 
 
-// window.addEventListener('beforeunload', function (e) {
-//     e.preventDefault();
-//     e.returnValue = true;
-// });
+window.addEventListener('beforeunload', function (e) {
+    e.preventDefault();
+    e.returnValue = true;
+});
 
 
 const triggerTimer = () => {
